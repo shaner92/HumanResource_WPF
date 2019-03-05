@@ -34,5 +34,22 @@ namespace HumanResource_WPF
             logInForm.Show();
             Close();
         }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new HrDBContext();
+            var user = new User()
+            {
+                FirstName = txtFN.Text,
+                LastName = txtLN.Text,
+                Position = txtPosition.Text,
+                CreateDate = DateTime.Now,
+                Email = txtEmail.Text,
+                Password = PasswordCrypt.SimpleEncrypt(txtPW.Text)
+            };
+            context.Users.Add(user);
+            context.SaveChanges();
+            closeFrm();
+        }
     }
 }
