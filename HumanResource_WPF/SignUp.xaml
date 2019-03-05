@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HumanResource_WPF"
         mc:Ignorable="d"
-        Title="SignUp" Height="453.719" Width="653.099">
-    <Grid Margin="-7,0,0,-4" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="224" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        Title="SignUp" Height="438.719" Width="576.099">
+    <Grid Margin="-7,0,0,-4" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="224" Background="{DynamicResource BrushBlue}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="143*"/>
-            <RowDefinition Height="281*"/>
+
         </Grid.RowDefinitions>
         <Grid.RenderTransform>
             <TransformGroup>
@@ -18,14 +17,20 @@
                 <TranslateTransform/>
             </TransformGroup>
         </Grid.RenderTransform>
-        <Button x:Name="btnCancel" Content="Button" HorizontalAlignment="Left" Margin="40,209,0,0" VerticalAlignment="Top" Width="127" Click="btnCancel_Click" RenderTransformOrigin="-0.837,0.581" Height="41" Grid.Row="1"/>
-        <Button x:Name="btnSignUp" Content="Button" HorizontalAlignment="Left" Margin="384,209,-372,0" VerticalAlignment="Top" Width="175" Click="btnSignUp_Click" Height="41" Grid.Row="1"/>
-        <TextBox x:Name="txtFN" HorizontalAlignment="Left" Height="26" Margin="355,42,-418,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBox x:Name="txtLN" HorizontalAlignment="Left" Height="17" Margin="355,110,-418,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBox x:Name="txtPosition" HorizontalAlignment="Left" Height="21" Margin="355,33,-418,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Row="1"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="16" Margin="355,95,-418,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Row="1"/>
-        <TextBox x:Name="txtPW" HorizontalAlignment="Left" Height="23" Margin="355,149,-418,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Row="1"/>
-        <Label x:Name="lblUserName" Content="User Name" HorizontalAlignment="Left" Margin="40,42,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="40,346,0,0" VerticalAlignment="Top" Width="127" Click="btnCancel_Click" RenderTransformOrigin="-0.837,0.581" Height="41" IsTabStop="False" IsCancel="True"/>
+        <Button x:Name="btnSignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="368,346,-319,0" VerticalAlignment="Top" Width="175" Click="btnSignUp_Click" Height="41" TabIndex="7" IsDefault="True"/>
+        <TextBox x:Name="txtLN" HorizontalAlignment="Left" Height="25" Margin="287,134,-313,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TabIndex="3"/>
+        <TextBox x:Name="txtPosition" HorizontalAlignment="Left" Height="25" Margin="287,244,-313,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TabIndex="5"/>
+        <TextBox x:Name="txtFN" HorizontalAlignment="Left" Height="25" Margin="287,85,-313,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TabIndex="2"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="25" Margin="287,187,-313,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TabIndex="4"/>
+        <TextBox x:Name="txtPW" HorizontalAlignment="Left" Height="25" Margin="287,292,-313,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TabIndex="6"/>
+        <Label x:Name="lblUserName" Content="First Name" HorizontalAlignment="Left" Margin="40,85,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
+        <Label x:Name="lblUserName_Copy" Content="Last Name" HorizontalAlignment="Left" Margin="40,134,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
+        <Label x:Name="lblUserName_Copy1" Content="Position" HorizontalAlignment="Left" Margin="40,244,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
+        <Label x:Name="lblUserName_Copy2" Content="User Name" HorizontalAlignment="Left" Margin="40,33,0,0" VerticalAlignment="Top" Height="26" Width="69" Grid.Row="1"/>
+        <Label x:Name="lblUserName_Copy3" Content="Email" HorizontalAlignment="Left" Margin="40,187,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
+        <Label x:Name="lblUserName_Copy4" Content="Password" HorizontalAlignment="Left" Margin="40,291,0,0" VerticalAlignment="Top" Height="26" Width="69"/>
+        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="25" Margin="287,40,-313,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TabIndex="1"/>
 
     </Grid>
 </Window>

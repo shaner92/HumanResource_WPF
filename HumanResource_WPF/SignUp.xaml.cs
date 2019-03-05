@@ -40,6 +40,7 @@ namespace HumanResource_WPF
             var context = new HrDBContext();
             var user = new User()
             {
+                UserName = txtUserName.Text,
                 FirstName = txtFN.Text,
                 LastName = txtLN.Text,
                 Position = txtPosition.Text,

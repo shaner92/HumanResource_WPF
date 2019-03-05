@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:HumanResource_WPF"
              StartupUri="Login.xaml">
     <Application.Resources>
-         
+
+        <SolidColorBrush x:Key="BrushBlue" Color="#FF99B4D1"/>
+
     </Application.Resources>
 </Application>

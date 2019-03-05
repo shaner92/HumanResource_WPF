@@ -24,5 +24,6 @@ namespace HumanResource_WPF
         {
             InitializeComponent();
         }
+
     }
 }

@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HumanResource_WPF"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="btnSignIn" Content="Log In" HorizontalAlignment="Left" Margin="504,329,0,0" VerticalAlignment="Top" Width="131" Click="btnSignIn_Click" Height="41"/>
-        <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" Margin="260,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
-        <TextBox x:Name="txtPW" HorizontalAlignment="Left" Height="17" Margin="260,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252"/>
-        <Button x:Name="btnSingUp" Content="Sign Up" HorizontalAlignment="Left" Margin="111,329,0,0" VerticalAlignment="Top" Width="155" Click="btnSingUp_Click" Height="41"/>
-        <Label Content="User ID" HorizontalAlignment="Left" Margin="132,113,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="132,183,0,0" VerticalAlignment="Top"/>
+        Title="Login" Height="293.801" Width="610.332">
+    <Grid Margin="0,0,377,0" Background="{DynamicResource BrushBlue}">
+        <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" Margin="264,53,-313,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" TabIndex="1"/>
+        <Button x:Name="btnSingUp" Content="Sign Up" HorizontalAlignment="Left" Margin="37,175,0,0" VerticalAlignment="Top" Width="155" Click="btnSingUp_Click" Height="41"/>
+        <Label Content="User ID" HorizontalAlignment="Left" Margin="37,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="37,118,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSignIn" Content="Log In" HorizontalAlignment="Left" Margin="322,175,-228,0" VerticalAlignment="Top" Width="131" Click="btnSignIn_Click" Height="41" RenderTransformOrigin="0.505,0.487" IsDefault="True"/>
+        <PasswordBox x:Name="txtPW" HorizontalAlignment="Left" Margin="264,124,-291,0" VerticalAlignment="Top" Width="252" TabIndex="2"/>
 
     </Grid>
 </Window>
