@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Menu HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="177" Background="{DynamicResource BrushBlue}">
+            <Button Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="44" Width="156"/>
+        </Menu>
+
+
     </Grid>
 </Window>
