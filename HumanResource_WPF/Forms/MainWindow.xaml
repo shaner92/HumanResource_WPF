@@ -9,8 +9,8 @@
     <Grid>
 
         <Menu HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="177" Background="{DynamicResource BrushBlue}">
-            <Button x:Name="btnEmployees" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="45" Width="155" Margin="0,10" Content="Employees" Click="Button_Click"/>
-            <Button Height="45" Width="155" Margin="0,10" Click="Button_Click_1"/>
+            <Button x:Name="btnEmployees" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="45" Width="155" Margin="0,10" Content="Employees" Click="btnEmployeesClick"/>
+            <Button Height="45" Width="155" Margin="0,10"/>
             <Button Height="45" Width="155" Margin="0,10"/>
             <Button Height="45" Width="155" Margin="0,10"/>
             <Button Height="45" Width="155" Margin="0,10"/>

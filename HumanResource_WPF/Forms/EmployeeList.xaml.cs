@@ -19,6 +19,7 @@ namespace HumanResource_WPF
     /// </summary>
     public partial class EmployeeList : Window
     {
+        private HrDBContext context = new HrDBContext(); 
         public EmployeeList()
         {
             InitializeComponent();
@@ -29,6 +30,20 @@ namespace HumanResource_WPF
             MainWindow form = new MainWindow();
             form.Tag = this;
             form.Show();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+           var list =  context.Employees.ToList();
+            DGVEmployees.ItemsSource = list;
+        }
+
+        private void btnAddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            AddEmployee form = new AddEmployee();
+            form.Tag = this;
+            form.Show();
+            Hide();
         }
     }
 }

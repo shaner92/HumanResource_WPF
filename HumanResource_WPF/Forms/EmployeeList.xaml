@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="EmployeeList" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
-        <DataGrid x:Name="DGVEmployees" HorizontalAlignment="Left" Height="313" Margin="0,107,0,0" VerticalAlignment="Top" Width="640"/>
-        <Button x:Name="btnEditEmployee" Content="Edit Employee" HorizontalAlignment="Left" Margin="658,376,0,0" VerticalAlignment="Top" Width="124" Height="34"/>
-        <Button x:Name="btnAddEmployee" Content="Add Employee" HorizontalAlignment="Left" Margin="658,321,0,0" VerticalAlignment="Top" Width="124" Height="34"/>
+        <DataGrid x:Name="DGVEmployees" HorizontalAlignment="Left" Height="313" Margin="10,97,0,0" VerticalAlignment="Top" Width="630"/>
+        <Button x:Name="btnEditEmployee" Content="Edit Employee" HorizontalAlignment="Left" Margin="658,354,0,0" VerticalAlignment="Top" Width="124" Height="34"/>
+        <Button x:Name="btnAddEmployee" Content="Add Employee" HorizontalAlignment="Left" Margin="658,295,0,0" VerticalAlignment="Top" Width="124" Height="34" Click="btnAddEmployee_Click"/>
 
     </Grid>
 </Window>

@@ -25,22 +25,17 @@ namespace HumanResource_WPF
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnEmployeesClick(object sender, RoutedEventArgs e)
         {
             EmployeeList form = new EmployeeList();
             form.Tag = this;
             form.Show();
             Hide();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Environment.Exit(0);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace HumanResource_WPF
         public string LastName { get; set; }
         public string Position { get; set; }
         public string Email { get; set; }
-        public string PayRate { get; set; }
+        public double PayRate { get; set; }
+        public byte[] Picture { get; set; }
     }
 }
