@@ -30,23 +30,22 @@ namespace HumanResource_WPF
 
         private void btnAddEmployee(object sender, RoutedEventArgs e)
         {
-            
-            var context = new HrDBContext();
-
-            var employee = new Employee()
-
-            {
-                FirstName = "test",
-                LastName = "test",
-                HireDate = DateTime.Now,
-                Position = "test",
-                Email = "test",
-                PayRate = 2.25,
-                Picture = bytePic
-            };
-            context.Employees.Add(employee);
-            context.SaveChanges();
-            
+          
+            using (var context = new HrDBContext()){
+                var employee = new Employee()
+                {
+                    FirstName = "test",
+                    LastName = "test",
+                    HireDate = DateTime.Now,
+                    Position = "test",
+                    Email = "test",
+                    PayRate = 2.25,
+                    Picture = bytePic
+                };
+                context.Configuration.AutoDetectChangesEnabled = false;
+                context.Employees.Add(employee);
+                context.SaveChanges();
+            }  
         }
 
         private void btnUploadImg(object sender, RoutedEventArgs e)

@@ -27,19 +27,20 @@ namespace HumanResource_WPF
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
             var password = PasswordCrypt.SimpleEncrypt(txtPW.Password);
-            var context = new HrDBContext();
-            var username = txtID.Text;
-            try
-            {
-                var user = context.Users.Where(un => un.UserName == username).Where(pw => pw.Password == password).First();
-                MainWindow form = new MainWindow();
-                form.Tag = this;
-                form.Show();
-                Hide();
-            }
-            catch
-            {
-                MessageBox.Show("Could not validate user");
+            using (var context = new HrDBContext()) { 
+                var username = txtID.Text;
+                try
+                {
+                    var user = context.Users.Where(un => un.UserName == username).Where(pw => pw.Password == password).First();
+                    MainWindow form = new MainWindow();
+                    form.Tag = this;
+                    form.Show();
+                    Hide();
+                }
+                catch
+                {
+                    MessageBox.Show("Could not validate user");
+                }
             }
         }
 

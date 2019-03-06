@@ -19,7 +19,7 @@ namespace HumanResource_WPF
     /// </summary>
     public partial class EmployeeList : Window
     {
-        private HrDBContext context = new HrDBContext(); 
+      
         public EmployeeList()
         {
             InitializeComponent();
@@ -43,8 +43,12 @@ namespace HumanResource_WPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            using (var context = new HrDBContext())
+            {
                 var list = context.Employees.ToList();
-                DGVEmployees.ItemsSource = list; 
+                DGVEmployees.ItemsSource = list;
+            }
+               
         }
     }
 }
