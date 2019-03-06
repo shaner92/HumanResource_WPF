@@ -32,11 +32,6 @@ namespace HumanResource_WPF
             form.Show();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-           var list =  context.Employees.ToList();
-            DGVEmployees.ItemsSource = list;
-        }
 
         private void btnAddEmployee_Click(object sender, RoutedEventArgs e)
         {
@@ -44,6 +39,12 @@ namespace HumanResource_WPF
             form.Tag = this;
             form.Show();
             Hide();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+                var list = context.Employees.ToList();
+                DGVEmployees.ItemsSource = list; 
         }
     }
 }

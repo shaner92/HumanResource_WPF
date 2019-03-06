@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace HumanResource_WPF
 {
@@ -50,11 +51,20 @@ namespace HumanResource_WPF
 
         private void btnUploadImg(object sender, RoutedEventArgs e)
         {
-            //var fd  = new OpenFileDialog();
-            //fd.Title = "Open File Dialog"
-            //fd.InitialDirectory = "C:\Users\shaner\Desktop\PDDs"
-            var img = new HelperClasses.ImageConvertor();
-            bytePic = img.imageToByteArray(@"C:\Users\shaner\OneDrive - Sciemetric Instruments\Documentation\Brazil Visa\visa_photo.jpeg");
+           OpenFileDialog dlg = new OpenFileDialog();
+            //Filter for images only
+            dlg.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                var img = new HelperClasses.ImageConvertor();
+                bytePic = img.imageToByteArray(filename);
+            }
+
         }
     }
 }
