@@ -10,37 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HumanResource_WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EmployeeList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EmployeeList : Window
     {
-        public MainWindow()
+        public EmployeeList()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            EmployeeList form = new EmployeeList();
-            form.Tag = this;
-            form.Show();
-            Hide();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Environment.Exit(0);
+            MainWindow form = new MainWindow();
+            form.Tag = this;
+            form.Show();
         }
     }
 }

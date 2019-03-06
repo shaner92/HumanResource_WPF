@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HumanResource_WPF"
         mc:Ignorable="d"
         Title="Login" Height="293.801" Width="610.332">
-    <Grid Margin="0,0,377,0" Background="{DynamicResource BrushBlue}">
+    <Grid Margin="0,0,2,0" Background="{DynamicResource BrushBlue}">
         <TextBox x:Name="txtID" HorizontalAlignment="Left" Height="23" Margin="264,53,-313,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" TabIndex="1"/>
         <Button x:Name="btnSingUp" Content="Sign Up" HorizontalAlignment="Left" Margin="37,175,0,0" VerticalAlignment="Top" Width="155" Click="btnSingUp_Click" Height="41"/>
         <Label Content="User ID" HorizontalAlignment="Left" Margin="37,50,0,0" VerticalAlignment="Top"/>
