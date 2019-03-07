@@ -1,9 +1,10 @@
-﻿<Window x:Class="HumanResource_WPF.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HumanResource_WPF"
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="HumanResource_WPF.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
@@ -16,6 +17,19 @@
             <Button Height="45" Width="155" Margin="0,10"/>
         </Menu>
 
+
+        <chartingToolkit:Chart Name="chart" Margin="197,10,235,207">
+            <chartingToolkit:Chart.Series>
+                <chartingToolkit:ColumnSeries x:Name="roomSeries" Title="Rooms"  
+                                           IndependentValueBinding="{Binding RoomNumber}"
+                                           DependentValueBinding="{Binding NumberOfPersons}">
+                </chartingToolkit:ColumnSeries>
+            </chartingToolkit:Chart.Series>
+            <chartingToolkit:Chart.Axes>
+                <chartingToolkit:LinearAxis Orientation="Y" Title="Number of persons"/>
+                <chartingToolkit:LinearAxis Orientation="X" Title="Rooms" Interval="1"  />
+            </chartingToolkit:Chart.Axes>
+        </chartingToolkit:Chart>
 
     </Grid>
 </Window>

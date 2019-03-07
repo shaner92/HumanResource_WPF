@@ -37,9 +37,9 @@ namespace HumanResource_WPF
                     form.Show();
                     Hide();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Could not validate user");
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
